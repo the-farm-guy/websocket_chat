@@ -2,3 +2,6 @@ asyncio
 websockets
 aioconsole
 prompt_toolkit
+sqlalchemy
+alembic
+bcrypt
