@@ -26,7 +26,7 @@ async def chat():
                         break
                     
                     elif message.strip():
-                        print(message)
+                        # print(message)
                         await websocket.send(message)
                     
                     else:

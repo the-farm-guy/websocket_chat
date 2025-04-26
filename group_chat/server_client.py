@@ -47,8 +47,8 @@ async def server_input():
                 print('can not send empty message')
             
             else:
-                server_message = f"[SERVER]: {message}"
-                print(server_message)
+                server_message = f"admin: {message}"
+                # print(server_message)
                 await broadcast(server_message)
 
 async def main():
