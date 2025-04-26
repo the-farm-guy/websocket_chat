@@ -46,6 +46,9 @@ def signup():
         if mail_login == 'yes':
             signup_mail()
             
+        else:
+            pass
+            
     else:
         raise ValueError('password does not match try again')
 
@@ -106,9 +109,25 @@ def reset_password():
 def logout():
     sys.exit()
 
-if __name__ == '__main__':
-    if button.lower() == 'signup':
+logged_in = 0
+if button.lower() == 'signup':
         signup()
+        login_yn = input('Do you want to login now : yes/no: ')
         
-    else:
-        pass
+        if login_yn.strip().lower() == 'yes':
+            quick_login(login_yn)
+            
+        elif login_yn.strip().lower() == 'no':
+            pass
+            
+        else:
+            raise ValueError('No option identified')
+        
+        logged_in = 1
+        
+elif button.lower() == 'login':
+        login()
+        logged_in = 1
+
+else:
+    raise ValueError('No option identified')

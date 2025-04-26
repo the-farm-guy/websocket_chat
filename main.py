@@ -1,21 +1,23 @@
-from auth.auth import login, logout
+from auth.auth import logout, logged_in, login
 import subprocess
 
-prompt = input("enter a button : logout / live chat : ")
+prompt = input("do you want to live chat : yes / no : ")
 
-if prompt.lower() == "logout":
+if prompt.lower() == "no":
     logout()
 
-elif prompt.lower() == "live chat":
+elif prompt.lower() == "yes":
     try:
-        is_login = login()
-        if is_login == 1:
-            subprocess.run(["bash", "client.sh"], check=True)
-                
+        if logged_in == 0:
+            login()
+            
         else:
-            raise ValueError('invalid credentials')
+            subprocess.run(["bash", "client.sh"], check=True)
             
     except subprocess.CalledProcessError as e:
-            print(f"Shell script failed with error: {e}")
+        print(f"Shell script failed with error: {e}")
+            
+else:
+    raise ValueError("No option identified")
 
     
