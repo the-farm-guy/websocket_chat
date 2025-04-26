@@ -10,6 +10,9 @@ python3 -m venv venv
 echo "Activating the virtual environment..."
 source venv/bin/activate
 
+echo "Updating pip..."
+pip install --upgrade pip
+
 echo "Installing dependencies..."
 pip install -r requirments.txt
 
