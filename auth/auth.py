@@ -105,3 +105,10 @@ def reset_password():
 
 def logout():
     sys.exit()
+
+if __name__ == '__main__':
+    if button.lower() == 'signup':
+        signup()
+        
+    else:
+        pass
