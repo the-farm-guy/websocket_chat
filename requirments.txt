@@ -1,3 +1,4 @@
 asyncio
 websockets
 aioconsole
+prompt_toolkit
