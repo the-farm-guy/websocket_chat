@@ -20,6 +20,6 @@ pip install -r requirments.txt
 # python3 clients_server.py
 
 echo "Running authentication and starting live chat"
-python3 main.py
+python3 setup.py
 
 echo "Script completed."
