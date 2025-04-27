@@ -118,7 +118,7 @@ if button.lower() == 'signup':
             quick_login(login_yn)
             
         elif login_yn.strip().lower() == 'no':
-            pass
+            sys.exit()
             
         else:
             raise ValueError('No option identified')
