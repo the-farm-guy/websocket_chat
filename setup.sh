@@ -22,4 +22,4 @@ pip install -r requirments.txt
 echo "Running authentication and starting live chat"
 python3 setup.py
 
-echo "Script completed."
+echo "Setup completed."
