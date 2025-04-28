@@ -4,6 +4,7 @@ import subprocess
 prompt = input("do you want to live chat : yes / no : ")
 
 if prompt.lower() == "no":
+    print("You will be logged out now")
     logout()
 
 elif prompt.lower() == "yes":
