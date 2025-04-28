@@ -1,0 +1,15 @@
+[project]
+name = "websockets"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "aioconsole>=0.8.1",
+    "alembic>=1.15.2",
+    "asyncio>=3.4.3",
+    "bcrypt>=4.3.0",
+    "prompt-toolkit>=3.0.51",
+    "pydantic>=2.11.3",
+    "sqlalchemy>=2.0.40",
+]
