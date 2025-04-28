@@ -61,13 +61,15 @@ def login():
     if user and bcrypt.checkpw(ip_password, user.password):
         print('Login successful')
         
-        reset_password_yn = input('do you want to change you current passowrd : yes/no : ')
-        if reset_password_yn.strip().lower() == 'yes':
-            reset_password()
+        # Password reset Logic. It was placed here bcz there were nothing to do after login.
+        
+        # reset_password_yn = input('do you want to change you current passowrd : yes/no : ')
+        # if reset_password_yn.strip().lower() == 'yes':
+        #     reset_password()
             
-            mail_reset = input('do you want to recieve an email for password reset : yes/no : ')
-            if mail_reset.strip().lower() == 'yes':
-                reset_mail()
+        #     mail_reset = input('do you want to recieve an email for password reset : yes/no : ')
+        #     if mail_reset.strip().lower() == 'yes':
+        #         reset_mail()
             
         return 1
 
